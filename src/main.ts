@@ -5,6 +5,7 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(
+    //유효성 검증
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
